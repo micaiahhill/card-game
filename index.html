@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Autobiography</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Page 1: Welcome Screen -->
+  <section id="welcome-screen" class="screen active">
+    <h1>Autobiography</h1>
+    <p class="rules">
+      Welcome to Autobiography — a storytelling card game about life’s journey! <br><br>
+      🎴 Choose from three life stages: Early Life(The Tender Years), Mid-Life(The Flourishing Years), or Reflection(The Golden Years of Reflection).<br>
+      👥 Each player will draw a card and answer a question.<br>
+      🔁 No repeats. Play until you're ready to restart.Cards are already shuffled!
+    </p>
+    <button onclick="goToPlayerSetup()">Start Game</button>
+  </section>
+
+  <!-- Page 2 and 3 will go here later -->
+  <section id="player-setup" class="screen">
+    <h2>Enter Player Information</h2>
+    <label for="player-count">How many players?</label>
+    <input type="number" id="player-count" min="1" max="10" />
+    <button onclick="createNameInputs()">Next</button>
+  
+    <div id="name-inputs" style="margin-top: 20px;"></div>
+  </section>
+
+  <!-- Page 3: Deck Selection -->
+<section id="deck-selection" class="screen">
+    <h2>Choose a Deck</h2>
+    <div id="turn-banner" class="turn-banner">
+        It's <span id="player-name">Player</span>'s turn!
+      </div> 
+      <div class="card-container">
+        <div class="card card-tender" onclick="drawCard('early')">
+          <div class="card-category">AUTOBIOGRAPHY</div>
+          <hr>
+          <div class="card-star">✶</div>
+          <h2 class="card-title">THE TENDER YEARS</h2>
+          <div class="card-star">✶</div>
+          <hr>
+          <p class="card-text">BE SINCERE &amp; HAVE FUN</p>
+          <div id="early-card" class="card-back">Click to draw</div>
+        </div>
+        
+        <div class="card card-flourishing" onclick="drawCard('mid')">
+          <div class="card-category">AUTOBIOGRAPHY</div>
+          <hr>
+          <div class="card-star">✶</div>
+          <h2 class="card-title">THE FLOURISHING YEARS</h2>
+          <div class="card-star">✶</div>
+          <hr>
+          <p class="card-text">BE SINCERE &amp; HAVE FUN</p>
+          <div id="mid-card" class="card-back">Click to draw</div>
+        </div>
+        <div class="card card-golden" onclick="drawCard('later')">
+          <div class="card-category">AUTOBIOGRAPHY</div>
+          <hr>
+          <div class="card-star">✶</div>
+          <h2 class="card-title">THE GOLDEN YEARS OF REFLECTION</h2>
+          <div class="card-star">✶</div>
+          <hr>
+          <p class="card-text">BE SINCERE &amp; HAVE FUN</p>
+          <div id="later-card" class="card-back">Click to draw</div>
+        </div>
+        </div>
+    <button id="next-player-btn" style="margin-top: 20px; display: none;" onclick="goToNextPlayer()">
+        Next Player
+      </button>
+      <div id = "error-message" class="error-message"></div>
+      <div id = "message" class="message"></div>
+      <button onclick="restartGame()" style="margin-top: 20px;">Restart Game</button>
+
+  </section>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

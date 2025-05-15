@@ -1,0 +1,208 @@
+/* Pastel Color Theme */
+:root {
+    --background: #fdf6f0;
+    --primary: #d9b8ff;   /* soft lavender */
+    --primary-dark: #c89dff;
+    --accent: #ffe0e9;    /* soft pink */
+    --text: #4a4a4a;
+  }
+  
+ /* body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+  h1 {
+    font-size: 3em;
+    margin-top: 60px;
+    color: var(--primary-dark);
+  }
+  
+  .rules {
+    margin: 20px auto;
+    max-width: 500px;
+    font-size: 1.2em;
+    background: var(--accent);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: var(--primary-dark);
+  }
+  
+  .screen {
+    display: none;
+  }
+  
+  .screen.active {
+    display: block;
+  }
+  input[type="number"], input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    font-size: 1em;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 200px;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--primary-dark);
+  }
+ 
+
+  .turn-banner {
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: #f6d2e0; 
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin: 20px auto;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    color: #444;
+  } 
+  .error-message {
+    color: red;
+    font-size: 1.2em;
+    margin-top: 20px;
+  }
+  .message{
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #4caf50; /* green */
+    font-weight: bold;
+  }
+/* Pastel Color Theme */
+  
+  .card-container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 350px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.card-tender {
+    background-color: #f3e5f5;
+    border-color: #d0b8e6;
+}
+
+.card-flourishing {
+    background-color: #ffe0f0;
+    border-color: #f48fb1;
+}
+
+.card-golden {
+    background-color: #fff3e0;
+    border-color: #ffb74d;
+}
+
+.card-title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 0px;
+    color: #333;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: serif;
+}
+
+.card-category {
+    font-size: 0.7em;
+    color: #555;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+    font-family:  sans-serif;
+}
+
+.card-star {
+    font-size: 2.0em;
+    color: #444;
+}
+
+.card-text {
+    font-size: 0.85em;
+    color: #666;
+    
+    font-family: serif;
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+    border: none;
+    margin: 5px auto 10px auto;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+    }
+    .card {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 10px;
+    }
+    .card-title {
+        font-size: 1.2em;
+    }
+    .card-text {
+        font-size: 0.75em;
+    }
+}
